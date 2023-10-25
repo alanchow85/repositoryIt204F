@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Dynamically Add New List Item</title>
+  <style>
+	ul { list-style-position:inside; }
+  </style>
+  <script>
+   
+    function addItem() {
+      var item = prompt("Enter a new item");
+      alert("hihi, cher Alan here!");
+        //prompt to enter a new item
+      var unorderList = document.getElementById("hobby"); //use getElementById method to get <ul> element
+      newLiElement = document.createElement("li"); //create the <li> element using the createElement method
+      newLiElement.innerText = item;  // assign the innerText (entered by user) to the new <li> element
+      unorderList.appendChild(newLiElement); //append the new item element to the <ul> element
+      }
+
+      function addModule() {
+      var item = prompt("Enter a new module");
+      alert("hihi, cher Alan here!");
+        //prompt to enter a new item
+      var unorderList = document.getElementById("modules"); //use getElementById method to get <ul> element
+      newLiElement = document.createElement("li"); //create the <li> element using the createElement method
+      newLiElement.innerText = item;  // assign the innerText (entered by user) to the new <li> element
+      unorderList.appendChild(newLiElement); //append the new item element to the <ul> element
+      }
+  </script>
+
+</head>
+<body>
+ 
+  <ul id="hobby">
+       My Hobbies:
+       <li>Swimming</li>
+       <li>Jogging</li>
+  </ul>
+  <br>
+    <ul id="modules">
+      My modules:
+      <li>IT1952</li>
+      <li>IT2662</li>
+  </ul> 
+
+   <button id="c" onclick="addItem()">Add Item</button>
+   <button id="d" onclick="addModule()">Add Module</button>
+</body>
+</html>
